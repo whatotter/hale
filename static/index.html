@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="icon" href="/static/favicon.svg" color="#ffffff">
+<link rel="mask-icon" href="/static/favicon.svg" color="#ffffff">
+
+<title>hale | movie streaming wrapper</title>
+
+<head>
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="/static/fa/select.css">
+    <link href="/static/fa/all.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
+
+    <script src="/static/js/particles.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/select.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div id="particles-js"></div>
+        <div class="header-overlap">
+            <div style="position:absolute; top:0; right:0; padding: 16px; height: 48px;">
+                <span>VIP player</span>
+                <br>
+                <label class="switch">
+                    <input type="checkbox" id="vip">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <center style="padding-top: 24px">
+                <h1><i class="fa-solid fa-meteor header-ico"></i>hale</h1>
+                
+                <span>created by otter</span>
+                <br>
+
+                <input type="text" id="search" placeholder="search for your favorite movie.." class="search">
+            </center>
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div class="big-cont">
+            <h2 class="big-cont-h2">Starred<i id="starred-chevron" style="margin-left: 8px; transition: 0.25s ease-in-out;" class="fa-solid fa-angle-down"></i></h2>
+            
+            <div id="starred" class="movie-container" style="flex-wrap: nowrap; overflow-x: scroll; overflow-y: hidden;"></div>
+        </div>
+    
+        <br>
+        <hr>
+
+        <div class="big-cont">
+            <h2 class="big-cont-h2">Recently Watched<i id="recent-chevron" style="margin-left: 8px; transition: 0.25s ease-in-out;" class="fa-solid fa-angle-down"></i></h2>
+            <div id="recent" class="movie-container" style="flex-wrap: nowrap; overflow-x: scroll; overflow-y: hidden;"></div>
+        </div>
+    
+        <br>
+        <hr>
+    
+        <div class="big-cont">
+            <div id="movies" class="movie-container"></div>
+        </div>
+    </div>
+
+</body>
