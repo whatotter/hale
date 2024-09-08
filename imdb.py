@@ -210,7 +210,7 @@ def grabMovInfo(_id):
     return a
 
 def grabEPInfo(_id, season):
-    urlID = base64.b64encode('https://www.imdb.com/_next/data/QBIwJY3EEzuwhArHLKc8J/title/{}/episodes.json?season={}&tconst={}'.format(_id, season, _id).encode('ascii')).decode('ascii')
+    urlID = base64.b64encode('https://www.imdb.com/_next/data/AznRvB1QnY0m1h3Jklqtf/title/{}/episodes.json?season={}&tconst={}'.format(_id, season, _id).encode('ascii')).decode('ascii')
 
     if not cache.checkIfCached(urlID):
 
@@ -226,8 +226,9 @@ def grabEPInfo(_id, season):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0"
         }
 
-        a = requests.get('https://www.imdb.com/_next/data/QBIwJY3EEzuwhArHLKc8J/title/{}/episodes.json?season={}&tconst={}'.format(_id, season, _id), headers=headers)
+        a = requests.get('https://www.imdb.com/_next/data/AznRvB1QnY0m1h3Jklqtf/title/{}/episodes.json?season={}&tconst={}'.format(_id, season, _id), headers=headers)
         
+        print(a.text)
         b = json.loads(a.text)
 
         if a.status_code == 200:

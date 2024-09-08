@@ -634,5 +634,12 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('callback - particles.js config loaded');
       });
 
-
+    
+    if (window.doesAdBlockExist == undefined) {
+        console.log("adblock exists!")
+        document.getElementById("hasadblock").innerHTML = "did detect an adblocker, that's <span style=\"color: green; font-weight: bold\">good!</span>"
+    } else {
+        console.log("adblock does not exist :(")
+        document.getElementById("hasadblock").innerHTML = "did not detect an adblocker, that's <span style=\"color: red; font-weight: bold\">bad.</span> go install one"
+    }
 })
